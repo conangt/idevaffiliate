@@ -18,8 +18,6 @@ $order_number = null;
 // ----------------------------------------------------------------
 require_once("../../API/config.php");
 
-var_dump($_SERVER['REMOTE_ADDR']);
-exit();
 //初始化
 $curl = curl_init();
 //设置抓取的url
