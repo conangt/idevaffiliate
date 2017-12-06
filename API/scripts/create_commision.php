@@ -17,7 +17,20 @@ $order_number = null;
 // CONNECT TO THE DATABASE & MAKE SITE CONFIG SETTINGS AVAILABLE
 // ----------------------------------------------------------------
 require_once("../../API/config.php");
-var_dump($base_url);
+
+//初始化
+$curl = curl_init();
+//设置抓取的url
+curl_setopt($curl, CURLOPT_URL, 'http://34.238.118.51/sale.php?profile=72198&idev_saleamt=1700.00&idev_ordernum=testt11&idev_commission=1.01');
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($curl, CURLOPT_HEADER, 0);
+//执行命令
+$data = curl_exec($curl);
+//关闭URL请求
+curl_close($curl);
+//显示获得的数据
+print_r($data);
+
 exit();
 if ($api_email_address == '') { $api_email_address = $address; }
 
