@@ -7,7 +7,9 @@
 #############################################################
 
 $order_number = null;
-
+$base_url = str_replace("http://", "https://", $base_url);
+var_dump($base_url);
+exit();
 // ----------------------------------------------------------------
 // We've designed this API file as simple as possible.  We didn't use any 
 // complex queries and everything should be fairly self explanatory.
@@ -24,7 +26,6 @@ if ($api_email_address == '') { $api_email_address = $address; }
 // - The variable is already sanitized.
 // - The variable is already validated through _GET, or _POST.
 // ------------------------------------------------------------------------------
-
 $secret = check_type_api('secret');
 $get_rows = $db->prepare("select secret from idevaff_config where secret = ? limit 1");
 $get_rows->execute(array($secret));
