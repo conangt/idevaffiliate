@@ -29,8 +29,8 @@ $data = curl_exec($curl);
 //关闭URL请求
 curl_close($curl);
 //显示获得的数据
-print_r($data);
-
+var_dump($data);
+exit();
 exit();
 if ($api_email_address == '') { $api_email_address = $address; }
 
