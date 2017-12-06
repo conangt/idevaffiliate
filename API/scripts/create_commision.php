@@ -21,7 +21,7 @@ require_once("../../API/config.php");
 //初始化
 $curl = curl_init();
 //设置抓取的url
-curl_setopt($curl, CURLOPT_URL, 'http://34.238.118.51/sale.php?profile=72198&idev_saleamt=1700.00&idev_ordernum=testt11&idev_commission=1.01&ip_address=34.238.118.51');
+curl_setopt($curl, CURLOPT_URL, 'http://34.238.118.51/sale.php?profile=72198&idev_saleamt=1700.00&idev_ordernum=testt11&products_purchased=1&ip_address=34.238.118.51');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($curl, CURLOPT_HEADER, 0);
 //执行命令
