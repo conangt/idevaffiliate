@@ -7,9 +7,7 @@
 #############################################################
 
 $order_number = null;
-$base_url = str_replace("http://", "https://", $base_url);
-var_dump($base_url);
-exit();
+
 // ----------------------------------------------------------------
 // We've designed this API file as simple as possible.  We didn't use any 
 // complex queries and everything should be fairly self explanatory.
@@ -19,7 +17,8 @@ exit();
 // CONNECT TO THE DATABASE & MAKE SITE CONFIG SETTINGS AVAILABLE
 // ----------------------------------------------------------------
 require_once("../../API/config.php");
-
+var_dump($base_url);
+exit();
 if ($api_email_address == '') { $api_email_address = $address; }
 
 // CHECK VALID SECRET KEY IS PRESENT AND VALID
